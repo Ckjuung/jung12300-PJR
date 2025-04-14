@@ -8,7 +8,8 @@ SERVICE_KEY = os.environ.get("API_KEY")
 LAWD_CD = "11200"  # 성동구
 APT_NAME = "텐즈힐"
 DEAL_YM = datetime.today().strftime("%Y%m")
-
+# 🔧 data 디렉토리 자동 생성
+os.makedirs("data", exist_ok=True)
 def fetch_items(deal_type="매매"):
     url = "http://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev" \
           if deal_type == "매매" else \
