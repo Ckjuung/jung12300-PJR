@@ -1,0 +1,10 @@
+realprice-analysis/
+├── .github/
+│   └── workflows/
+│       └── run.yml               # GitHub Actions 워크플로 설정
+├── scripts/
+│   └── collect_price.py         # 실거래가 수집 + 전세가율 분석 스크립트
+├── data/
+│   └── output.csv               # 결과 저장용
+├── requirements.txt             # 필요 패키지
+└── README.md
