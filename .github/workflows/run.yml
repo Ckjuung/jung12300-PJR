@@ -25,10 +25,3 @@ jobs:
 
     - name: Run collector
       run: python scripts/collect_price.py
-    - name: Commit results
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add data/output.csv data/report.md
-        git commit -m "auto: update report for ${DEAL_YM}" || echo "No changes to commit"
-        git push
